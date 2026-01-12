@@ -106,15 +106,17 @@ npm run tauri dev
 
 ### 升级版本号
 
+> 命令后添加 --no-git-tag-version 可以忽略未提交文件直接更新版本号
+
 ```bash
 # 升级补丁版本 0.1.0 -> 0.1.1
-npm version patch --no-git-tag-version
+npm version patch
 
 # 升级次版本 0.1.0 -> 0.2.0
-npm version minor --no-git-tag-version
+npm version minor
 
 # 升级主版本 0.1.0 -> 1.0.0
-npm version major --no-git-tag-version
+npm version major
 ```
 
 ### 同步版本号
