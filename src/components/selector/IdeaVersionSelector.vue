@@ -191,14 +191,36 @@ onMounted(() => {
 }
 
 .path-input :deep(.el-input__wrapper) {
-  box-shadow: 0 0 0 1px var(--el-input-border-color) inset;
+  box-shadow: none !important;
+  border: 1px solid var(--el-input-border-color);
+  border-right: none;
+}
+
+.path-input :deep(.el-input__inner) {
+  box-shadow: none !important;
+}
+
+.path-input :deep(.el-input__wrapper.is-focus) {
+  box-shadow: none !important;
+  border-color: var(--el-color-primary);
 }
 
 .path-input :deep(.el-input-group__append) {
-  box-shadow: 0 0 0 1px var(--el-input-border-color) inset;
+  background-color: var(--el-fill-color-light);
+  box-shadow: none !important;
+  border: 1px solid var(--el-input-border-color);
+  border-left: 1px solid var(--el-input-border-color);
+}
+
+.path-input :deep(.el-input-group__append .el-button) {
+  box-shadow: none !important;
+  border: none !important;
+  background-color: transparent;
+  padding: 0 15px;
+  margin: 0;
 }
 
 :deep(.el-input-group__append) {
-  padding: 0 12px;
+  padding: 0;
 }
 </style>
