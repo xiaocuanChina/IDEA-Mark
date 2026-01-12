@@ -61,7 +61,6 @@ function handleMenuSelect(index) {
     <div class="header">
       <IdeaVersionSelector @select-version="onVersionSelected" />
       <BookmarkStats 
-        v-if="parsedBookmarks.length > 0"
         :stats="bookmarkStats"
         :loading="loading"
         :can-refresh="!!currentWorkspacePath"
