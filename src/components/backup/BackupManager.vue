@@ -2,7 +2,7 @@
 import { ref, watch, onMounted, computed } from "vue";
 import { invoke } from "@tauri-apps/api/core";
 import { ElMessage, ElMessageBox } from "element-plus";
-import BookmarkViewer from "./BookmarkViewer.vue";
+import BookmarkViewer from "../bookmark/BookmarkViewer.vue";
 
 const props = defineProps({
   workspacePath: {
