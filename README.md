@@ -100,6 +100,33 @@ npm run tauri dev
 
 ---
 
+## 🔖 版本管理
+
+项目版本号需要同步到 `package.json`、`tauri.conf.json` 和 `Cargo.toml` 三个文件。
+
+### 升级版本号
+
+```bash
+# 升级补丁版本 0.1.0 -> 0.1.1
+npm version patch --no-git-tag-version
+
+# 升级次版本 0.1.0 -> 0.2.0
+npm version minor --no-git-tag-version
+
+# 升级主版本 0.1.0 -> 1.0.0
+npm version major --no-git-tag-version
+```
+
+### 同步版本号
+
+升级后运行以下命令同步到其他配置文件：
+
+```bash
+npm run sync-version
+```
+
+---
+
 ## 📦 打包发布
 
 生成可分发的安装包：
