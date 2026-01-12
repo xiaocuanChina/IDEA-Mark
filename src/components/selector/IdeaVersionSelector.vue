@@ -154,7 +154,8 @@ onMounted(() => {
 
 <style scoped>
 .version-selector {
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .selector-content {
@@ -175,17 +176,26 @@ onMounted(() => {
 .input-area {
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-width: 400px;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
 }
 
 .version-select {
-  width: 220px;
+  width: 180px;
 }
 
 .path-input {
   flex: 1;
-  min-width: 280px;
+  min-width: 150px;
+}
+
+.path-input :deep(.el-input__wrapper) {
+  box-shadow: 0 0 0 1px var(--el-input-border-color) inset;
+}
+
+.path-input :deep(.el-input-group__append) {
+  box-shadow: 0 0 0 1px var(--el-input-border-color) inset;
 }
 
 :deep(.el-input-group__append) {

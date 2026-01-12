@@ -71,18 +71,23 @@ export default {
 .stats-content {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .stats-group {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
 }
 
 .refresh-btn {
-  margin-left: auto;
   flex-shrink: 0;
+}
+
+.stats-card :deep(.el-card__body) {
+  padding: 12px 16px;
 }
 
 :deep(.el-statistic) {
