@@ -1,10 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
 import { invoke } from "@tauri-apps/api/core";
-import BookmarkViewer from "./BookmarkViewer.vue";
-import IdeaVersionSelector from "./IdeaVersionSelector.vue";
-import BookmarkStats from "./BookmarkStats.vue";
-import BackupManager from "./BackupManager.vue";
+import BookmarkViewer from "./bookmark/BookmarkViewer.vue";
+import IdeaVersionSelector from "./selector/IdeaVersionSelector.vue";
+import BookmarkStats from "./bookmark/BookmarkStats.vue";
+import BackupManager from "./backup/BackupManager.vue";
 
 const currentWorkspacePath = ref("");
 const parsedBookmarks = ref([]);

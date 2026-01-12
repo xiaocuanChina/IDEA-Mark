@@ -120,20 +120,35 @@ npm run tauri build
 
 ```
 ideaMark/
-├── src/                    # 前端源码（Vue）
-│   ├── components/         # Vue 组件
-│   │   ├── BookmarkDashboard.vue   # 主面板
-│   │   ├── BookmarkList.vue        # 书签列表
-│   │   ├── BookmarkStats.vue       # 统计图表
-│   │   └── ...
-│   ├── App.vue             # 根组件
-│   └── main.js             # 入口文件
-├── src-tauri/              # 后端源码（Rust）
-│   ├── src/                # Rust 源码
-│   ├── Cargo.toml          # Rust 依赖配置
-│   └── tauri.conf.json     # Tauri 配置
-├── package.json            # 前端依赖配置
-└── vite.config.js          # Vite 配置
+├── src/                          # 前端源码（Vue）
+│   ├── assets/                   # 静态资源
+│   │   ├── javascript.svg
+│   │   └── tauri.svg
+│   ├── components/               # Vue 组件
+│   │   ├── backup/               # 备份相关组件
+│   │   │   └── BackupManager.vue       # 备份管理器
+│   │   ├── bookmark/             # 书签相关组件
+│   │   │   ├── BookmarkItem.vue        # 书签项
+│   │   │   ├── BookmarkList.vue        # 书签列表
+│   │   │   ├── BookmarkStats.vue       # 书签统计
+│   │   │   └── BookmarkViewer.vue      # 书签查看器
+│   │   ├── selector/             # 选择器组件
+│   │   │   ├── BookmarkImporter.vue    # 书签导入器
+│   │   │   ├── IdeaVersionSelector.vue # IDEA版本选择器
+│   │   │   └── WorkspaceFileSelector.vue # 工作空间文件选择器
+│   │   └── BookmarkDashboard.vue # 主面板
+│   ├── App.vue                   # 根组件
+│   ├── main.js                   # 入口文件
+│   └── styles.css                # 全局样式
+├── src-tauri/                    # 后端源码（Rust）
+│   ├── src/                      # Rust 源码
+│   ├── icons/                    # 应用图标
+│   ├── capabilities/             # Tauri 权限配置
+│   ├── Cargo.toml                # Rust 依赖配置
+│   └── tauri.conf.json           # Tauri 配置
+├── index.html                    # HTML 入口
+├── package.json                  # 前端依赖配置
+└── vite.config.js                # Vite 配置
 ```
 
 ---
